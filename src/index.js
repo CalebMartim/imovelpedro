@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { Form } from "./Form";
+// import { Form } from "./Form";
 import { Header } from "./Header";
 
 function App() {
   return (
     <section>
       <Header />
-      <Form />
+      {/* <Form /> */}
     </section>
   );
 }

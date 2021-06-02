@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+/* .images{
+  Casa por fora: "https://i.ibb.co/LYzQvPw/IMG-7174.jpg"
+  Piscinha: "https://i.ibb.co/4sJQ3vD/IMG-7201.jpg"
+  Sala: "https://i.ibb.co/1mBBK3Y/IMG-7253.jpg"
+  Banheiro: "https://i.ibb.co/tDqnKWj/IMG-7234.jpg"
+  Sala: "https://i.ibb.co/C6mLSXm/IMG-7176.jpg"
+} */
+
 body {
   font-family: sans-serif;
   color: white;
@@ -11,33 +19,85 @@ body {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 1em;
 }
 
-.header {
-  height: 100vh;
-  width: 100%;
+.header,
+.divDescriLeft {
   display: grid;
   grid-template-columns: repeat(2, 50%);
 }
 
 .img {
-  background-image: url("https://www.thepinnaclelist.com/wp-content/uploads/2020/06/10-Travertine-Dream-House-Luxury-Residence-Serangoon-Singapore.jpg");
+  background-image: url("https://i.ibb.co/4sJQ3vD/IMG-7201.jpg");
   height: 100vh;
   background-size: cover;
 }
 
 .titImovel {
   position: relative;
-  display: flex;
+  display: grid;
   justify-content: flex-end;
   right: 1em;
   font-size: 2rem;
 }
+
+.titImovel p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+/* SEGUNDA SEÇÃO */
+
+.divDescriRight {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.img-2 {
+  background-image: url("https://i.ibb.co/1mBBK3Y/IMG-7253.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+.fa-home,
+.fa-bath,
+.fa-couch {
+  display: none;
+}
+
+.textoDescriRight {
+  display: grid;
+  font-weight: lighter;
+  font-size: 1.6rem;
+  place-items: center;
+}
+
+/* TERCEIRA SEÇAO */
+
+.textoDescriLeft {
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+}
+
+.img-3 {
+  background-image: url("https://i.ibb.co/tDqnKWj/IMG-7234.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+/* QUARTA SEÇAO */
+
+.img-4 {
+  background-image: url("https://i.ibb.co/C6mLSXm/IMG-7176.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+/* FORMULÁRIO */
 
 .form h1 {
   text-align: center;
@@ -61,7 +121,7 @@ section {
 }
 
 .form label,
-p {
+.form p {
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -105,4 +165,58 @@ input {
 #enviar:hover {
   background: white;
   color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+  /* SEÇAO UM */
+  .header {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .titImovel {
+    height: 50vh;
+    text-align: center;
+    right: 0;
+    grid-template-rows: 60% 40%;
+  }
+  .titImovel h1 {
+    align-self: flex-end;
+  }
+  .img,
+  .img-2,
+  .img-3,
+  .img-4 {
+    width: 100vw;
+    height: 50vh;
+    border: 1em solid rgb(42, 42, 42);
+    border-radius: 1.5em;
+    background-size: cover;
+  }
+  /* SEÇAO DOIS */
+  .divDescriRight,
+  .divDescriLeft {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+  }
+  .textoDescriRight,
+  .textoDescriLeft {
+    text-align: center;
+    width: 20ch;
+    font-size: 1.3rem;
+  }
+  .fa-home,
+  .fa-bath,
+  .fa-couch {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 0.2em;
+  }
+  li {
+    margin-bottom: 0.2em;
+  }
+  /* SEÇAO TRES */
+  .img-3 {
+    grid-row: 1/2;
+  }
 }
