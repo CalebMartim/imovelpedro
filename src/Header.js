@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
+
+function useOnScreen(options) {
+  const ref = useRef();
+  const [visible, setVisible] = useState(false);
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(([entry]) => {
+  //     setVisible(entry.isIntersecting);
+  //   }, options);
+
+  //   if (ref.current) {
+  //     observer.observe(ref, current);
+  //   }
+  // }, [ref, options]);
+}
 
 export const Header = () => {
+  const ref = { current: null };
+  const visible = false;
   return (
     <>
       <div className="btnContato">
         <a href="#contato">Entrar em contato</a>
       </div>
       <section className="header">
-        <div className="titImovel">
+        <div
+          className="titImovel"
+          ref={ref}
+          style={{ opacity: visible ? 1 : 0 }}
+        >
           <h1>Imóvel em Arniqueiras</h1>
           <p>
             <i>Uma excelente casa para você e sua família</i>
@@ -51,9 +72,7 @@ export const Header = () => {
         <div className="textoDescriRight">
           <i className="fas fa-couch"></i>
           <ul>
-            <li>
-              Energia solar para conta de <b>R$1000</b>
-            </li>
+            <li>Completamente na energia solar</li>
             <li>Closet</li>
             <li>Piscina aquecida</li>
             <li>Ar condicionado em todos quartos</li>

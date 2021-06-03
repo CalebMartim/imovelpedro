@@ -4,7 +4,7 @@ export const Form = () => {
   return (
     <section>
       <div className="form">
-        <h1>Quer saber mais sobre este imóvel?</h1>
+        <h1>Quer ser o primeiro a receber novidades sobre este imóvel?</h1>
         <form action="">
           <label for="nome">Nome: </label>
           <br />
