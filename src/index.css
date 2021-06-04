@@ -40,6 +40,7 @@ section {
   justify-content: flex-end;
   right: 1em;
   font-size: 2rem;
+  transition: all 1s ease-in;
 }
 
 .titImovel p {
@@ -73,7 +74,7 @@ section {
   background-color: white;
 }
 
-/* SEGUNDA SEÇÃO */
+/* PRIMEIRO SEÇÃO */
 
 .divDescriRight {
   display: grid;
@@ -100,9 +101,10 @@ section {
   font-weight: lighter;
   font-size: 1.6rem;
   place-items: center;
+  transition: all 1s ease-in;
 }
 
-/* TERCEIRA SEÇAO */
+/* SEGUNDA SEÇAO */
 
 .img-3 {
   background-image: url("https://i.ibb.co/tDqnKWj/IMG-7234.jpg");
@@ -110,7 +112,7 @@ section {
   background-size: cover;
 }
 
-/* QUARTA SEÇAO */
+/* TERCEIRA SEÇAO */
 
 .img-4 {
   background-image: url("https://i.ibb.co/C6mLSXm/IMG-7176.jpg");
@@ -118,24 +120,46 @@ section {
   background-size: cover;
 }
 
+/* VÍDEO */
+
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+iframe {
+  width: 37%;
+  height: 80%;
+  transition: all 1s ease-in;
+}
+
 /* FOOTER */
 
 .contato {
   display: flex;
-  flex-direction: column;
-  height: 40vh;
   justify-content: center;
   align-items: center;
   background-color: #f2f2f2;
   color: rgb(42, 42, 42);
+  height: 40vh;
 }
 
-.contato h1 {
+.footerTexto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in;
+}
+
+.footerTexto h1 {
   font-size: 2rem;
   margin-bottom: 0.5em;
 }
 
-.contato p {
+.footerTexto p {
   font-size: 1.6rem;
 }
 /* FORMULÁRIO */
@@ -231,7 +255,7 @@ input {
     height: 40vh;
     border: 1em solid rgb(42, 42, 42);
     border-radius: 1.5em;
-    background-size: cover;
+    background-size: repeat;
   }
   /* SEÇAO DOIS */
   .divDescriRight,
@@ -261,12 +285,17 @@ input {
   .img-3 {
     grid-row: 1/2;
   }
+  /* VÍDEO */
+  iframe {
+    width: 90%;
+    height: 52%;
+  }
   /* FOOTER */
-  .contato h1 {
+  .footerTexto h1 {
     text-align: center;
     font-size: 1.4rem;
   }
-  .contato p {
+  .footerTexto p {
     text-align: center;
     font-size: 1.3rem;
   }
