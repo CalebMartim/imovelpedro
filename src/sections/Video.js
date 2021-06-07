@@ -7,11 +7,11 @@ export const Video = () => {
     <>
       <section className="video">
         <iframe
-          src="https://www.youtube.com/embed/jfBV1N8lbf4"
+          src="https://www.youtube.com/embed/q3pVTwi_OsI"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowfullscreen="true"
           ref={ref}
           style={{
             opacity: visible ? 1 : 0,
