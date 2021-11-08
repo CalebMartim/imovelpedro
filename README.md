@@ -1,6 +1,6 @@
 # Site de venda para um imóvel em Arniqueiras/DF 
 O site pode ser acessado em https://imovelpedro.netlify.app
-
+![Demonstração do website](https://i.imgur.com/1FRf5YD.png)
 * Site feito com React
 ## Técnicas usadas
 * Usando os hooks useEffect e useState junto com o API Intersection Observer e CSS deu para se criar ume efeito onde texto só aparece quando o usuário chega a certa parte da página
