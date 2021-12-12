@@ -15,7 +15,7 @@ Usando Git Bash no Windows ou o terminal no Mac ou Linux, digite
 
 caso não funcione, você provavelmente precisa baixar a biblioteca React 
 
-`npm install react -g`
+`npm install react`
 
 e tente `npm start` novamente 
 
